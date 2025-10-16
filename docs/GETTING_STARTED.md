@@ -8,20 +8,25 @@
 
 2. **Set up your environment and install dependencies using [uv](https://github.com/astral-sh/uv):**  
    `uv` is the preferred tool for managing this project.  
+   
    Make sure `uv` is installed:
    ```bash
    pip install uv
    ```
+   
    Then, run:
    ```bash
    uv sync
+   
    ```
+
    This command will automatically create a virtual environment (if one does not exist) and install all dependencies as specified in `pyproject.toml`.
 
 3. **Initialize dbt (if not already done):**
    ```bash
    dbt init dbt_duckdb
    ```
+
    **Sample output:**
    ```
    Running with dbt=1.10.13
@@ -33,6 +38,7 @@
    cd dbt_duckdb
    dbt debug
    ```
+
    **Sample output:**
    ```
    Running with dbt=1.10.13

@@ -14,9 +14,7 @@ It is designed for data engineers who want a clear, step-by-step guide to dbt-co
 ## Table of Contents
 
 - [Getting Started](docs/GETTING_STARTED.md)
-- [Project Structure](#project-structure)
-- [dbt Concepts](docs/DBT_CONCEPTS.md)
-- [Step-by-Step Modules](#step-by-step-modules)
+- Step-by-Step Modules
   - [Seeding Data](docs/SEEDING.md)
   - [Building Models](docs/MODELS.md)
   - [Testing Data](docs/TESTING.md)
@@ -26,4 +24,5 @@ It is designed for data engineers who want a clear, step-by-step guide to dbt-co
 - [Contributing](#contributing)
 
 ## Contributing
+
 Feel free to contribute improvements or clarifications as you learn!
