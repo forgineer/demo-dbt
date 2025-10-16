@@ -1,0 +1,14 @@
+# Ignore dbt artifacts
+dbt_packages/
+logs/
+target/
+
+# Ignore duckdb database files
+*.duckdb
+*.db
+
+# Ignore user-specific files
+
+# The '.user.yml' file was generated from 'dbt debug' command.
+# I am unsure of its purpose, so I am ignoring it for now.
+.user.yml

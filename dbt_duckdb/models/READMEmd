@@ -1,0 +1,7 @@
+# models
+
+This folder contains SQL files that define your dbt models.  
+
+Models are select statements that transform raw data into analytics-ready tables or views.  
+
+Organize models by subject area or business logic as your project grows.

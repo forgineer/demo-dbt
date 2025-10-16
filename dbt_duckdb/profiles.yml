@@ -1,0 +1,42 @@
+dbt_duckdb:
+  outputs:
+    dev:
+      type: duckdb
+      path: dev.duckdb
+      threads: 1
+
+    prod:
+      type: duckdb
+      path: prod.duckdb
+      threads: 4
+
+  target: dev
+
+# NOTE:
+# dbt looks for profiles.yml in the following order:
+# 1. The directory specified by the DBT_PROFILES_DIR environment variable (if set).
+# 2. The current working directory, if profiles.yml is present there.
+# 3. The default location: ~/.dbt/profiles.yml in your home directory.
+#
+# Recommended usage:
+# - For most projects, place profiles.yml in ~/.dbt/ to keep sensitive connection info
+#   (like credentials and database paths) separate from your codebase and version control.
+# - For local development or sharing project-specific configs, you can keep profiles.yml
+#   in your project directory, but avoid committing sensitive information.
+# - Use DBT_PROFILES_DIR to explicitly control which profiles.yml dbt uses.
+#
+# Why:
+# - Separating profiles.yml from your code helps protect credentials and supports
+#   multiple dbt projects using different configurations on the same machine.
+# - Keeping profiles.yml out of version control reduces the risk of exposing secrets.
+# - Always check 'dbt debug' output to confirm which profiles file is being used.
+#
+# For this project:
+# - This profiles.yml file will be committed to version control for educational and
+#   learning purposes only. Do not use this practice for production or sensitive environments.
+#
+# Platform-specific note:
+# - Different data platforms (e.g., Snowflake, BigQuery, Postgres, Redshift) require
+#   different attributes in profiles.yml, such as URLs, account names, or authentication settings.
+# - Always consult the dbt profiles reference guide for your target platform to ensure
+#   you include all required configuration options.
